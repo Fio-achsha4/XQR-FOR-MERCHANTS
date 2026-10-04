@@ -1,0 +1,60 @@
+============================================================
+             XQR FORENSIC ANALYSIS REPORT
+============================================================
+
+IMAGE INFORMATION
+------------------------------------------------------------
+Image: D:\XQR-FOR-MERCHANTS\data\tampered\tampered_01.png
+
+FORENSIC SCORE BREAKDOWN
+------------------------------------------------------------
+ELA contribution:            10.00 / 25
+Quiet-Zone contribution:     35.00 / 35
+Noise Variance contribution: 30.00 / 40
+
+Raw forensic score:          75.00 / 100
+XQR prototype score:         75.00 / 99
+
+FORENSIC RESULT
+------------------------------------------------------------
+FORENSIC ANOMALIES DETECTED
+
+INTERPRETATION
+------------------------------------------------------------
+One or more forensic modules detected anomalous visual characteristics around the QR region.
+
+The XQR score is a prototype forensic score, not a probability, accuracy value, or proof of fraud.
+
+FORENSIC EVIDENCE
+------------------------------------------------------------
+- ELA detected a compression/editing difference.
+- Quiet-zone analysis detected possible intrusion.
+- Noise variance detected abnormal texture/noise.
+
+EXPERIMENTAL MOBILENETV3 CLASSIFICATION
+------------------------------------------------------------
+Status: Experimental / research-stage component
+The MobileNetV3 prediction is NOT used to determine the final forensic result.
+
+Prediction: genuine
+Confidence: 100.00%
+Genuine probability:  100.00%
+Tampered probability: 0.00%
+
+VISUAL EVIDENCE
+------------------------------------------------------------
+ELA heatmap:
+results\heatmaps\tampered_01_ela_heatmap.png
+
+Noise variance heatmap:
+results\heatmaps\tampered_01_noise_heatmap.png
+
+Combined forensic heatmap:
+results\heatmaps\tampered_01_combined_heatmap.png
+
+PROJECT NOTE
+------------------------------------------------------------
+This prototype is intended for research and forensic-assistance purposes. The current score thresholds require validation and calibration using a larger real-world dataset.
+A forensic anomaly does not by itself establish fraudulent ownership or fraudulent payment activity.
+
+============================================================

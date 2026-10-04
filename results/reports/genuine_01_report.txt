@@ -1,0 +1,58 @@
+============================================================
+             XQR FORENSIC ANALYSIS REPORT
+============================================================
+
+IMAGE INFORMATION
+------------------------------------------------------------
+Image: D:\XQR-FOR-MERCHANTS\data\genuine\genuine_01.png
+
+FORENSIC SCORE BREAKDOWN
+------------------------------------------------------------
+ELA contribution:            0.00 / 25
+Quiet-Zone contribution:     0.00 / 35
+Noise Variance contribution: 0.00 / 40
+
+Raw forensic score:          0.00 / 100
+XQR prototype score:         0.00 / 99
+
+FORENSIC RESULT
+------------------------------------------------------------
+NO FORENSIC ANOMALIES DETECTED
+
+INTERPRETATION
+------------------------------------------------------------
+No abnormal forensic signals were detected by the implemented classical modules.
+
+The XQR score is a prototype forensic score, not a probability, accuracy value, or proof of fraud.
+
+FORENSIC EVIDENCE
+------------------------------------------------------------
+- No forensic anomalies detected.
+
+EXPERIMENTAL MOBILENETV3 CLASSIFICATION
+------------------------------------------------------------
+Status: Experimental / research-stage component
+The MobileNetV3 prediction is NOT used to determine the final forensic result.
+
+Prediction: genuine
+Confidence: 100.00%
+Genuine probability:  100.00%
+Tampered probability: 0.00%
+
+VISUAL EVIDENCE
+------------------------------------------------------------
+ELA heatmap:
+results\heatmaps\genuine_01_ela_heatmap.png
+
+Noise variance heatmap:
+results\heatmaps\genuine_01_noise_heatmap.png
+
+Combined forensic heatmap:
+results\heatmaps\genuine_01_combined_heatmap.png
+
+PROJECT NOTE
+------------------------------------------------------------
+This prototype is intended for research and forensic-assistance purposes. The current score thresholds require validation and calibration using a larger real-world dataset.
+A forensic anomaly does not by itself establish fraudulent ownership or fraudulent payment activity.
+
+============================================================

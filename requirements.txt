@@ -1,0 +1,8 @@
+Flask
+numpy
+opencv-python
+Pillow
+qrcode[pil]
+ultralytics
+torch
+torchvision

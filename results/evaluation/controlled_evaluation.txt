@@ -1,0 +1,39 @@
+============================================================
+             XQR CONTROLLED EVALUATION
+============================================================
+
+Evaluation date: 2026-10-03 23:03:33
+
+GENUINE SAMPLE
+------------------------------------------------------------
+Image: data\genuine\genuine_01.png
+ELA:             0.00 / 25
+Quiet-Zone:      0.00 / 35
+Noise Variance:  0.00 / 40
+Raw Score:       0.00 / 100
+XQR Score:       0.00 / 99
+Result:          NO FORENSIC ANOMALIES DETECTED
+
+TAMPERED SAMPLE
+------------------------------------------------------------
+Image: data\tampered\tampered_01.png
+ELA:             10.00 / 25
+Quiet-Zone:      35.00 / 35
+Noise Variance:  30.00 / 40
+Raw Score:       75.00 / 100
+XQR Score:       75.00 / 99
+Result:          FORENSIC ANOMALIES DETECTED
+
+COMPARISON
+------------------------------------------------------------
+Genuine XQR score:  0.00 / 99
+Tampered XQR score: 75.00 / 99
+Score difference:    75.00 points
+
+CONTROLLED TEST OUTCOME
+------------------------------------------------------------
+PASS - The forensic pipeline separated the genuine and tampered samples.
+
+NOTE: The XQR score is a prototype forensic score and is not a probability or accuracy measurement. Larger real-world evaluation is required for calibration and performance metrics.
+
+============================================================

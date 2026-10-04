@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XQR FOR MERCHANTS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="background-orb orb-three"></div>
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="hero">
+
+            <div class="badge">
+                🛡️ Explainable QR Tamper Detection
+            </div>
+
+            <h1>XQR <span>FOR MERCHANTS</span></h1>
+
+            <p>
+                Detect suspicious QR sticker tampering using
+                explainable digital-forensics techniques.
+            </p>
+
+        </header>
+
+
+        <!-- UPLOAD CARD -->
+        <section class="upload-card">
+
+            <div class="upload-icon">
+                📷
+            </div>
+
+            <h2>Scan a QR Payment Sticker</h2>
+
+            <p>
+                Upload a clear photo of the merchant QR sticker
+            </p>
+
+            <div id="dropZone" class="drop-zone">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    hidden
+                >
+
+                <button id="chooseButton" class="gradient-button">
+                    Choose Image
+                </button>
+
+                <p class="drop-text">
+                    or drag & drop an image here
+                </p>
+
+                <p id="fileName" class="file-name">
+                    No image selected
+                </p>
+
+            </div>
+
+            <!-- IMAGE PREVIEW -->
+            <div id="previewContainer" class="preview-container hidden">
+
+                <img id="previewImage" alt="QR image preview">
+
+                <button id="analyzeButton" class="gradient-button analyze-button">
+                    🔍 Analyze QR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOADING SECTION -->
+        <section id="loadingSection" class="loading-card hidden">
+
+            <div class="scanner-icon">
+                🔬
+            </div>
+
+            <h2 id="loadingTitle">
+                Analyzing QR sticker...
+            </h2>
+
+            <p id="loadingStatus">
+                Preparing forensic analysis
+            </p>
+
+            <div class="main-progress">
+                <div id="mainProgressBar"></div>
+            </div>
+
+            <div class="loading-modules">
+
+                <div class="loading-module">
+                    <span>ELA</span>
+                    <div class="small-progress">
+                        <div id="elaLoading"></div>
+                    </div>
+                </div>
+
+                <div class="loading-module">
+                    <span>Quiet Zone</span>
+                    <div class="small-progress">
+                        <div id="quietLoading"></div>
+                    </div>
+                </div>
+
+                <div class="loading-module">
+                    <span>Noise Variance</span>
+                    <div class="small-progress">
+                        <div id="noiseLoading"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+        <section id="resultsSection" class="results-section hidden">
+
+            <div id="resultBadge" class="result-badge">
+                RESULT
+            </div>
+
+            <h2>Forensic Analysis</h2>
+
+            <p class="result-description">
+                Evidence collected from the uploaded QR sticker.
+            </p>
+
+
+            <!-- SCORE -->
+            <div class="score-card">
+
+                <div class="score-label">
+                    XQR PROTOTYPE SCORE
+                </div>
+
+                <div class="score-number">
+                    <span id="scoreValue">0</span>
+                    <small>/99</small>
+                </div>
+
+                <div class="score-progress">
+                    <div id="scoreBar"></div>
+                </div>
+
+                <p>
+                    Prototype forensic score — not a probability or accuracy percentage.
+                </p>
+
+            </div>
+
+
+            <!-- FORENSIC MODULES -->
+            <div class="module-grid">
+
+                <!-- ELA -->
+                <div class="module-card">
+
+                    <div class="module-header">
+                        <span>🧩</span>
+                        <h3>Error Level Analysis</h3>
+                    </div>
+
+                    <div class="module-score">
+                        <span id="elaScore">0</span>/25
+                    </div>
+
+                    <div class="module-progress">
+                        <div id="elaBar"></div>
+                    </div>
+
+                    <p>
+                        Detects abnormal compression differences.
+                    </p>
+
+                </div>
+
+
+                <!-- QUIET ZONE -->
+                <div class="module-card">
+
+                    <div class="module-header">
+                        <span>⬜</span>
+                        <h3>Quiet-Zone Analysis</h3>
+                    </div>
+
+                    <div class="module-score">
+                        <span id="quietScore">0</span>/35
+                    </div>
+
+                    <div class="module-progress">
+                        <div id="quietBar"></div>
+                    </div>
+
+                    <p id="quietDescription">
+                        Checking QR boundary.
+                    </p>
+
+                </div>
+
+
+                <!-- NOISE -->
+                <div class="module-card">
+
+                    <div class="module-header">
+                        <span>📡</span>
+                        <h3>Noise Variance</h3>
+                    </div>
+
+                    <div class="module-score">
+                        <span id="noiseScore">0</span>/40
+                    </div>
+
+                    <div class="module-progress">
+                        <div id="noiseBar"></div>
+                    </div>
+
+                    <p>
+                        Detects abnormal noise around the QR.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVIDENCE -->
+            <div class="evidence-card">
+
+                <h2>🔎 Evidence Detected</h2>
+
+                <div id="evidenceList">
+                    <p>No evidence yet.</p>
+                </div>
+
+            </div>
+
+
+            <!-- HEATMAP -->
+            <div class="heatmap-card">
+
+                <h2>🔥 Combined Forensic Heatmap</h2>
+
+                <p>
+                    Visual representation of detected forensic anomalies.
+                </p>
+
+                <div class="heatmap-container">
+
+                    <img
+                        id="heatmapImage"
+                        src=""
+                        alt="Combined forensic heatmap"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPERIMENTAL MODEL -->
+            <div class="experimental-card">
+
+                <span>🧪 Experimental</span>
+
+                <h3>MobileNetV3 + Grad-CAM</h3>
+
+                <p>
+                    The learned classifier is currently experimental
+                    and is not used for the final forensic decision.
+                </p>
+
+            </div>
+
+
+            <!-- RESET -->
+            <button id="resetButton" class="gradient-button reset-button">
+                ↻ Analyze Another Image
+            </button>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                XQR FOR MERCHANTS
+            </p>
+
+            <span>
+                Explainable Tamper-Detection Framework
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
