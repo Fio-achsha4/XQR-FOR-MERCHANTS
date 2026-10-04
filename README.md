@@ -1,6 +1,21 @@
-# XQR FOR MERCHANTS
+# 🔐 XQR FOR MERCHANTS
 
 ### An Explainable Tamper-Detection Framework for Small Business UPI Payments
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black?logo=flask)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-red?logo=opencv)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-QR_Detection-purple)
+![PyTorch](https://img.shields.io/badge/PyTorch-Machine_Learning-orange?logo=pytorch)
+![License](https://img.shields.io/badge/Project-Research_Prototype-yellow)
+
+</p>
+
+<p align="center">
+  <b>Detect suspicious QR-code sticker tampering using computer vision, image forensics, and explainable analysis.</b>
+</p>
 
 XQR FOR MERCHANTS is a prototype digital-forensics system designed to detect possible tampering around physical QR-code payment stickers used by small businesses.
 
