@@ -20,3 +20,6 @@ yolov8n.pt
 
 # YOLO cache files
 *.cache
+
+# Generated forensic heatmaps
+results/heatmaps/
