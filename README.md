@@ -25,6 +25,30 @@ The system combines computer vision, digital image forensics, machine learning, 
 
 ---
 
+## 🖥️ Web Application Demo
+
+XQR includes an interactive Flask web application for analyzing QR-code images and presenting explainable forensic evidence.
+
+### Forensic Analysis Result
+
+The interface displays the prototype forensic score together with individual evidence scores from ELA, quiet-zone analysis, and noise variance analysis.
+
+<p align="center">
+  <img src="docs/screenshots/xqr-analysis.png" alt="XQR forensic analysis result" width="850">
+</p>
+
+### Combined Forensic Heatmap
+
+The combined heatmap provides a visual representation of image regions contributing to the detected forensic anomalies.
+
+<p align="center">
+  <img src="docs/screenshots/xqr-heatmap.png" alt="XQR combined forensic heatmap" width="850">
+</p>
+
+> **Demo note:** The screenshots above show a live application result. The displayed forensic score is an anomaly score, not a probability of fraud or a statistical accuracy measurement.
+
+---
+
 ## 🔍 Problem Statement
 
 Physical QR-code payment stickers can potentially be replaced, covered, modified, or tampered with.
