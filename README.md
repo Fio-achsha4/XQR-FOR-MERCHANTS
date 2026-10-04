@@ -201,15 +201,15 @@ NO FORENSIC ANOMALIES DETECTED
 ```text
 ELA:             10 / 25
 Quiet Zone:      35 / 35
-Noise Variance:  30 / 40
+Noise Variance:  40 / 40
 
-XQR Score:       75 / 99
+XQR Score:       85 / 99
 
 Result:
 FORENSIC ANOMALIES DETECTED
 ```
 
-The controlled evaluation produced a **75-point separation** between the genuine and tampered samples.
+The controlled evaluation produced an **85-point separation** between the genuine and tampered samples.
 
 Because this evaluation uses a controlled sample pair rather than a large independent dataset, the result should not be considered a statistical accuracy measurement.
 
@@ -312,10 +312,10 @@ XQR-FOR-MERCHANTS/
 │   │   ├── fusion.py
 │   │   ├── margin.py
 │   │   ├── noise_variance.py
-│   │   └── quiet_zone.py
+│   │   ├── quiet_zone.py
+│   │   └── refine_qr.py
 │   │
 │   ├── preprocessing/
-│   │   ├── refine_qr.py
 │   │   └── yolo_detector.py
 │   │
 │   ├── create_test_pair.py
@@ -329,7 +329,7 @@ XQR-FOR-MERCHANTS/
 │   ├── test_margin.py
 │   ├── test_quiet_location.py
 │   ├── test_quiet_margins.py
-│   ├── test_quiet_zone.py
+│   ├── test_quiet_zone_visual.py
 │   ├── test_refine_qr.py
 │   └── test_yolo_detector.py
 │
@@ -352,6 +352,8 @@ The following local/generated files are excluded using `.gitignore`:
 * `.env` — environment variables/secrets
 * `.vscode/` — local editor settings
 * `.pytest_cache/` — pytest cache
+* `*.cache` — generated YOLO cache files
+* `yolov8n.pt` — pretrained YOLOv8 model weights
 
 ---
 
@@ -360,7 +362,7 @@ The following local/generated files are excluded using `.gitignore`:
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone https://github.com/Fio-achsha4/XQR-FOR-MERCHANTS.git
 cd XQR-FOR-MERCHANTS
 ```
 
@@ -372,13 +374,13 @@ python -m venv venv
 
 ### 3. Activate the environment on Windows
 
-```powershell
+```bash
 venv\Scripts\activate
 ```
 
 ### 4. Install dependencies
 
-```powershell
+```bash
 pip install -r requirements.txt
 ```
 
@@ -388,7 +390,7 @@ pip install -r requirements.txt
 
 From the project root:
 
-```powershell
+```bash
 python app.py
 ```
 
@@ -408,7 +410,7 @@ Upload a QR-code image and start the forensic analysis.
 
 The original command-line interface can also be used:
 
-```powershell
+```bash
 python src/main.py
 ```
 
@@ -420,7 +422,7 @@ The program will request the path to an image for analysis.
 
 The controlled forensic evaluation can be run using:
 
-```powershell
+```bash
 python evaluate_controlled.py
 ```
 
@@ -523,3 +525,6 @@ Results should be interpreted together with other evidence.
 ## 👩‍💻 Author
 
 Developed as a Cyber Security and Digital Forensics project exploring explainable QR-code tamper detection.
+
+**GitHub:**
+https://github.com/Fio-achsha4/XQR-FOR-MERCHANTS
